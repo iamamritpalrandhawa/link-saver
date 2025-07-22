@@ -1,7 +1,7 @@
 
 # Link Saver + Auto-Summary
 
-
+A web app to save bookmarks and auto-generate link summaries for easy reference and organization.
 ## Tech Stack
 Frontend: Next.js, React, Tailwind CSS, shadcn/ui
 
