@@ -39,9 +39,9 @@ export default function LoginPage() {
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { data, error } = await supabase.auth.signInWithPassword({ email, password })
         setLoading(false)
-        console.log("🚀 ~ handleLogin ~ data:", data)
         if (error) {
             setErrorMessage(error.message)
             setShowErrorDialog(true)

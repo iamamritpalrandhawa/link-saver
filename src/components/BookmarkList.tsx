@@ -36,6 +36,9 @@ export default function BookmarkList({ bookmarks: initialBookmarks = [] }: Bookm
     const [bookmarks, setBookmarks] = useState<Bookmark[]>(initialBookmarks)
     const [selectedBookmark, setSelectedBookmark] = useState<Bookmark | null>(null)
     const [confirmOpen, setConfirmOpen] = useState(false)
+    useEffect(() => {
+        setBookmarks(initialBookmarks)
+    }, [initialBookmarks])
 
     // Format date helper
     const formatDate = (dateString?: string) => {
@@ -113,7 +116,7 @@ export default function BookmarkList({ bookmarks: initialBookmarks = [] }: Bookm
                                         <div className="flex items-start justify-between">
                                             <div className="flex items-center gap-3 min-w-0 flex-1">
                                                 <div className="flex-shrink-0 w-8 h-8 bg-muted rounded-lg flex items-center justify-center">
-                                                    {bookmark.favicon ? (
+                                                    {bookmark.favicon && bookmark.favicon.trim() !== "" ? (
                                                         <img
                                                             src={bookmark.favicon}
                                                             alt="Site favicon"
