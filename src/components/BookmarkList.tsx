@@ -231,7 +231,7 @@ export default function BookmarkList({ bookmarks: initialBookmarks = [] }: Bookm
                                                             </div>
                                                             <h3 className="font-medium text-lg mb-2">No summary available</h3>
                                                             <p className="text-sm text-muted-foreground mb-4">
-                                                                This bookmark doesn't have a summary yet. Visit the original site to view the content.
+                                                                This bookmark doesn&apos;t have a summary yet. Visit the original site to view the content.
                                                             </p>
                                                             <Button asChild size="sm">
                                                                 <a
